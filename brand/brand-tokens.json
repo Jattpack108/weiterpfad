@@ -1,0 +1,34 @@
+{
+  "name": "Weiterpfad",
+  "tagline": "A calmer, clearer path after school.",
+  "tone": [
+    "calm",
+    "premium",
+    "restrained",
+    "humane",
+    "serious"
+  ],
+  "avoid": [
+    "generic SaaS",
+    "AI-magic",
+    "bureaucratic portal",
+    "flashy startup"
+  ],
+  "palette_reference": {
+    "base_background": "#0b1110",
+    "surface_dark": "#101817",
+    "surface_alt": "#0f1716",
+    "accent_soft": "#d6fae4",
+    "accent_ring": "rgba(110,231,183,0.2)",
+    "text_primary": "#ffffff",
+    "text_secondary": "rgba(255,255,255,0.68)",
+    "text_muted": "rgba(255,255,255,0.58)"
+  },
+  "ui_principles": [
+    "spacious layout",
+    "large border radii",
+    "soft shadows",
+    "subtle motion",
+    "strong readability"
+  ]
+}

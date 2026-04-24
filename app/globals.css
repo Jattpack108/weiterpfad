@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #0b1110;
+  --color-surface: #101817;
+  --color-surface-alt: #0f1716;
+  --color-surface-soft: rgba(255, 255, 255, 0.045);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+  --color-text: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.72);
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-text-subtle: rgba(255, 255, 255, 0.48);
+  --color-accent: #d6fae4;
+  --color-accent-strong: #b6f2cc;
+  --color-accent-ring: rgba(110, 231, 183, 0.2);
+  --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.28);
+  --shadow-panel: 0 18px 60px rgba(0, 0, 0, 0.22);
+}
+
+@theme inline {
+  --color-site-bg: var(--color-bg);
+  --color-site-surface: var(--color-surface);
+  --color-site-surface-alt: var(--color-surface-alt);
+  --color-site-border: var(--color-border);
+  --color-site-text: var(--color-text);
+  --color-site-text-secondary: var(--color-text-secondary);
+  --color-site-text-muted: var(--color-text-muted);
+  --color-site-accent: var(--color-accent);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, rgba(163, 230, 191, 0.09), transparent 30%),
+      radial-gradient(circle at top right, rgba(214, 250, 228, 0.05), transparent 26%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.035) 0%, transparent 16%),
+      var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-manrope), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  ::selection {
+    background: rgba(182, 242, 204, 0.22);
+    color: #f5fff8;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-newsreader), serif;
+  }
+
+  .site-panel {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.028));
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-panel);
+  }
+
+  .site-panel-inset {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.028), rgba(255, 255, 255, 0.018));
+    border: 1px solid var(--color-border);
+  }
+
+  .site-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 88px 88px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), transparent 92%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
